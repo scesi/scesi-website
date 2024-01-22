@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import joinAs from '../assets/images/join-as.png';
+---
+
+<section class="flex h-dvh w-full">
+  <div class="flex h-full w-full flex-col items-center justify-center gap-6">
+    <h2 class="max-w-[400px] text-center text-[32px] font-semibold">
+      ¿Cómo puedo ser parte?
+    </h2>
+
+    <p class="max-w-[440px] text-center text-[18px] font-normal">
+      Si tienes muchas ganas de aprender y salir de tu zona de confort, eres
+      bienvenid@ en la SCESI. Realizamos un proceso de postulación <strong
+        >anualmente</strong
+      >. Al inicio de la misma tendras la oportunidad de participar en una
+      reunión informativa junto a miembros y mesa directiva de la sociedad
+      cientifica.
+    </p>
+
+    <a
+      href="#"
+      class="flex items-center rounded-[6px] bg-[#D83746] px-5 py-3 text-[18px] font-bold text-white"
+      >Deseo ser parte!</a
+    >
+  </div>
+
+  <div class="flex w-full items-center justify-end">
+    <figure
+      class="max-h-[645px] max-w-[640px] overflow-hidden rounded-bl-[30px] rounded-tl-[30px]"
+    >
+      <Image
+        src={joinAs}
+        alt={'join as'}
+        class="h-full w-full object-cover object-center"
+        width={640}
+        height={645}
+      />
+    </figure>
+  </div>
+</section>
