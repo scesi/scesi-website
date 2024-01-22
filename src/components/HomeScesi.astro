@@ -1,0 +1,60 @@
+---
+import Navbar from "./Navbar.astro";
+---
+
+<div class="flex flex-col bg-[url('../../public/Bg.svg')] bg-cover h-screen">
+  <div class="mx-auto mt-[10%]">
+    <img src="../../public/SCESI.svg" class="mt-7 mb-4 w-96" alt="Scesi image" />
+    <div class="flex gap-12">
+      <img src="../../public/Group.svg" class="w-36 h-fit" alt="Umss image" />
+      <img src="../../public/Scesi-mouse.svg" class="w-56" alt="Mouse" />
+    </div>
+  </div>
+  <p class="font-['Poppins'] text-center text-5xl mt-8 leading-relaxed mb-[50px]">
+    Sociedad Científica de Estudiantes <br /> de Sistemas e Informática
+  </p>
+  <div class="personajes static flex justify-between">
+    <img src="../../public/Group_5202.svg" class="h-full" alt="" />
+    <img src="../../public/Grupo_5068.svg" class="h-full" alt="" />
+  </div>
+</div>
+
+<svg
+  class="trianimation"
+  width="31"
+  height="32",
+  viewBox="0 0 31 32"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M2.52188 2.25149L5.5443 15.2264L8.56676 28.2014L18.2881 19.097L28.0132 9.98576L15.2588 6.11836L2.52188 2.25149Z"
+    stroke="#76E2F4"
+    stroke-width="3"
+    stroke-miterlimit="10"></path>
+</svg>  
+
+<style>
+  .trianimation {   
+    width: fit-content;
+    height: fit-content;
+    animation-name: triangle1;
+    animation-duration: 5s;
+    position: absolute;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    left: 75%;
+    bottom: 20%;
+    height: 50px;
+  }
+
+  @keyframes triangle1 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
