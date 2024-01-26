@@ -1,0 +1,37 @@
+---
+interface props{
+    title: string;
+    details: string;
+    imageUrl: string;
+    redirectTo: string;
+    textButton: string;
+    height: string;
+    width: string;
+}
+
+const {title, details, imageUrl, redirectTo, textButton, height, width} = Astro.props as props;
+---
+<div 
+
+class:list={
+    [   "flex flex-col text-center  py-0 gap-3",
+        height? `h-[${height}]`: "h-[531px]",
+        width? `w-[${width}]`: "w-[400px]",
+    ]
+    }
+>
+    <img 
+        class="w-[100%] h-[50%] px-10" 
+        src={imageUrl} 
+        alt={title}
+    />
+    <p class="font-semibold text-2xl px-10"> {title} </p>
+    <p class="text-base font-normal"> {details} </p>
+    <a 
+        class="block m-auto bg-red-600 text-white  mt-3 h-[52px] px-[18px] py-3 rounded-md text-lg font-bold" 
+        href={redirectTo}
+    >
+        {textButton}
+    </a>
+</div>
+

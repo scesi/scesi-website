@@ -1,0 +1,28 @@
+---
+import ContactCard from "../ContactCard/ContactCard.astro"
+// opacity 70%
+---
+<section class="container m-auto py-16 px-[41px]">
+    <h2 class="text-2xl font-bold text-center text-[32px] mb-5">
+        Conéctate con Nosotros
+    </h2>
+    <div class="flex flex-col items-center lg:flex-row lg:justify-evenly px-24">
+        <ContactCard
+            title="Únete a nuestro canal de noticias!"
+            details="Contamos con un canal de Whatsapp para que te enteres de todas las noticias relacionadas a la facultad y carrera."
+            imageUrl="https://www.robotina.us/__export/1631895323321/sites/debate/img/2021/09/17/whatsapp-negocios-empresas.jpg_554688468.jpg"
+            textButton="Entrar al canal de whatsapp"
+            redirectTo="/"
+        />
+
+        <div class="hidden w-[0.2px] h-[50vh] xl:flex self-start  bg-gray-600"></div>
+
+        <ContactCard
+            title="Visita y aprende con el  blog de la SCESI"
+            details="Si deseas aprender de la mano de nuestros miembros, contamos con un blog donde podrás encontrar artículos acerca de programación y seguridad"
+            imageUrl="https://crehana-blog.imgix.net/media/filer_public/a7/f6/a7f6f348-ba16-4d5c-a55b-210a01037e8c/revisar-resultados-paginas-resumenes.jpg?auto=format&q=50"
+            textButton="Ir al blog"
+            redirectTo="/"
+        />
+    </div>
+</section>
