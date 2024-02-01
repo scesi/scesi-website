@@ -13,11 +13,15 @@ import campaña from '../assets/Campaña Navideña.jpg';
       Nuestros Eventos
     </p>
     <div
-      class="mx-auto mb-7 grid h-auto w-4/5 grid-cols-1 gap-6 sm:grid-cols-3"
+      class="scrollImages mx-auto mb-7 flex h-auto w-4/5 grid-cols-3 gap-6 xl:grid"
     >
-      <Image src={talleres} alt="Talleres de la campaña" class="mx-auto" />
-      <Image src={flisol} alt="FLISOL" class="mx-auto" />
-      <Image src={campaña} alt="Campañas Navideñas" class="mx-auto" />
+      <Image
+        src={talleres}
+        alt="Talleres de la campaña"
+        class="imgScroll mx-auto"
+      />
+      <Image src={flisol} alt="FLISOL" class="imgScroll mx-auto" />
+      <Image src={campaña} alt="Campañas Navideñas" class="imgScroll mx-auto" />
     </div>
   </div>
 
@@ -43,4 +47,22 @@ import campaña from '../assets/Campaña Navideña.jpg';
       <Image src={scesi} alt="Alguien con compu xd" class="ml-auto" />
     </div>
   </div>
+  <style>
+    .scrollImages {
+      scroll-snap-type: x mandatory;
+      overflow-x: scroll;
+      scrollbar-width: none;
+    }
+
+    @media only screen and (width < 1280px) {
+      .scrollImages {
+        max-width: 600px;
+      }
+    }
+
+    .imgScroll {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+    }
+  </style>
 </Layout>
