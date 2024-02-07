@@ -1,34 +1,26 @@
 ---
-interface props{
-    title: string;
-    imageUrl: string;
-    redirectTo: string;
-    textButton: string;
-    height: string;
-    width: string;
+import { Image } from "astro:assets";
+
+interface props {
+  title: string;
+  image: ImageMetadata;
+  redirectTo: string;
+  textButton: string;
 }
 
-const {title, imageUrl, redirectTo, textButton, height, width} = Astro.props as props;
+const { title, image, redirectTo, textButton } = Astro.props as props;
 ---
-<div 
-    class:list={
-        ["flex flex-col text-center  py-0 gap-3",
-            height? `h-[${height}]`: "h-[531px]",
-            width? `w-[${width}]`: "w-[400px]"]
-    }
->
-    <img 
-        class="w-[100%] h-[50%] px-10" 
-        src={imageUrl} 
-        alt={title}
-    />
-    <p class="font-semibold text-2xl px-10"> {title} </p>
-    <slot class="text-base font-normal" name="content" />
-    <a 
-        class="block m-auto bg-red-600 text-white  mt-3 h-[52px] px-[18px] py-3 rounded-md text-lg font-bold" 
-        href={redirectTo}
-    >
-        {textButton}
-    </a>
-</div>
 
+<div class="flex max-w-[300px] flex-col gap-3 py-0 text-center items-center">
+  
+  <Image src={image} class="aspect-square w-[100%] object-cover" alt={title}/>
+
+  <p class=" text-2xl font-Poppins font-semibold">{title}</p>
+  <slot class="text-base font-Poppins font-normal" name="content" />
+  <a
+    class="block px-[18px] py-3 m-auto mt-3 rounded-md bg-red-600 font-Poppins text-lg font-bold text-white "
+    href={redirectTo}
+  >
+    {textButton}
+  </a>
+</div>
