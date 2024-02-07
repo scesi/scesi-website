@@ -1,0 +1,38 @@
+---
+import FooterSocialLink from './FooterSocialLink.astro';
+---
+
+<footer class="w-full bg-[#202020] px-8 pb-2 pt-6">
+  <div
+    class="container flex flex-col gap-6 md:flex-row-reverse md:justify-between"
+  >
+    <div>
+      <h4 class="font-poppins font-bold text-white">Siguenos en:</h4>
+      <div class="mt-4 flex gap-8">
+        <FooterSocialLink
+          href="https://www.facebook.com/scesi"
+          img="/icons/fb-logo.svg"
+          alt="Facebook"
+        />
+        <FooterSocialLink
+          href="https://x.com/ScesiU"
+          img="/icons/x-logo.svg"
+          alt="X (Twitter)"
+        />
+        <FooterSocialLink
+          href="https://www.instagram.com/scesiumss"
+          img="/icons/ig-logo.svg"
+          alt="Instagram"
+        />
+        <FooterSocialLink
+          href="https://www.youtube.com/@scesiUmss"
+          img="/icons/yt-logo.svg"
+          alt="Youtube"
+        />
+      </div>
+    </div>
+
+    <img class="w-[75px]" src="/icons/scesi-bg-dark.svg" alt="SCESI logo" />
+  </div>
+  <p class="text-center text-white">Hecho con ❤️ por el team SCESI webcito</p>
+</footer>
