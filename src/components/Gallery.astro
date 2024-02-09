@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import image1 from '../assets/images/image-gallery-1.png';
 import image2 from '../assets/images/image-gallery-2.png';
 import image3 from '../assets/images/image-gallery-3.png';
@@ -9,84 +8,53 @@ import image6 from '../assets/images/image-gallery-6.png';
 import image7 from '../assets/images/image-gallery-7.png';
 import image8 from '../assets/images/image-gallery-8.png';
 import image9 from '../assets/images/image-gallery-9.png';
+import GalleryItem from './GalleryItem.astro';
 ---
 
-<main class="container mx-auto lg:px-28">
-  <h4 class="font-poppins text-2xl text-center font-semibold">Galería de imágenes</h4>
-  <div class="flex flex-col gap-3 py-3">
-    <!-- Primera fila de imágenes -->
-    <div class="flex flex-col gap-3 sm:flex-row sm:gap-2">
-      <div class="w-full sm:w-1/2">
-        <Image
-          src={image1}
-          class="w-full rounded-lg object-cover md:h-72"
-          alt="Cuatro miembros de la SCESI sonriendo"
-        />
-      </div>
-      <div class="w-full sm:w-1/4">
-        <Image
-          src={image2}
-          class="w-full rounded-lg object-cover md:h-72"
-          alt="Mesa directiva 2023"
-        />
-      </div>
-      <div class="w-full sm:w-1/4">
-        <Image
-          src={image3}
-          class="w-full rounded-lg object-cover md:h-72"
-          alt="Miembros de la SCESI en un evento del día de la mujer"
-        />
-      </div>
-    </div>
+<section class="container mx-auto lg:px-28">
+  <h4 class="text-center font-poppins text-2xl font-semibold">
+    Galería de imágenes
+  </h4>
 
-    <!-- Segunda fila de imágenes -->
-    <div class="flex flex-col gap-3 sm:flex-row sm:gap-2">
-      <div class="w-full sm:w-1/4">
-        <Image
-          src={image4}
-          class="w-full rounded-lg object-cover md:h-72"
-          alt="Taller SCESI"
-        />
-      </div>
-      <div class="w-full sm:w-1/2">
-        <Image
-          src={image5}
-          class="w-full rounded-lg object-cover md:h-72"
-          alt="Equipo organizador Flisol 2023"
-        />
-      </div>
-      <div class="w-full sm:w-1/4">
-        <Image
-          src={image6}
-          class="w-full rounded-lg object-cover md:h-72"
-          alt="Miembros de la SCESI en voluntariado"
-        />
-      </div>
-    </div>
-
-    <!-- Tercera fila de imágenes -->
-    <div class="flex flex-col gap-3 sm:flex-row sm:gap-2">
-      <div class="w-full sm:w-1/4">
-        <Image
-          src={image7}
-          class="w-full rounded-lg object-cover md:h-72"
-          alt="Imagen Flisol 2023"
-        />
-      </div>
-      <div class="w-full sm:w-1/4">
-        <Image
-          src={image8}
-          class="w-full rounded-lg object-cover md:h-72"
-          alt="Cuatro miembros de la SCESI"
-        />
-      </div>
-      <div class="w-full sm:w-1/2">
-        <Image
-          src={image9}
-          class="w-full rounded-lg object-cover md:h-72"
-          alt="Taller de la SCESI"
-        />
-      </div>
-    </div>
+  <!-- Primera fila de imágenes -->
+  <div class="flex flex-col gap-3 py-3 w-full sm:flex-row sm:gap-2">
+    <GalleryItem
+      src={image1}
+      size="wide"
+      alt="Cuatro miembros de la SCESI sonriendo"
+    />
+    <GalleryItem src={image2} size="default" alt="Mesa directiva 2023" />
+    <GalleryItem
+      src={image3}
+      size="default"
+      alt="Miembros de la SCESI en un evento del día de la mujer"
+    />
   </div>
-</main>
+
+  <!-- Segunda fila de imágenes -->
+  <div class="flex flex-col gap-3 pb-3 sm:flex-row sm:gap-2">
+    <GalleryItem src={image4} size="default" alt="Taller SCESI" />
+
+    <GalleryItem
+      src={image5}
+      size="wide"
+      alt="Equipo organizador Flisol 2023"
+    />
+    <GalleryItem
+      src={image6}
+      size="default"
+      alt="Miembros de la SCESI en voluntariado"
+    />
+  </div>
+
+  <!-- Tercera fila de imágenes -->
+  <div class="flex flex-col gap-3 pb-3 sm:flex-row sm:gap-2">
+    <GalleryItem src={image7} size="default" alt="Imagen Flisol 2023" />
+    <GalleryItem
+      src={image8}
+      size="default"
+      alt="Cuatro miembros de la SCESI"
+    />
+    <GalleryItem src={image9} size="wide" alt="Taller de la SCESI3" />
+  </div>
+</section>
