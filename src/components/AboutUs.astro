@@ -1,0 +1,15 @@
+---
+import { Image } from 'astro:assets';
+const { imagen, alt, content,  isPictureRight} = Astro.props;
+---
+
+<div class="contenido flex flex-col-reverse justify-center md:flex-row">
+  <p class="m-auto text-center font-sans md:w-3/5 md:p-4 mr-0 md:mr-10">
+    {content}
+  </p>
+  <Image
+    class="h-48 w-full rounded-lg object-cover md:h-auto md:w-2/5"
+    src={imagen}
+    alt={alt}
+  />
+</div>
