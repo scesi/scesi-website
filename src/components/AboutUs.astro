@@ -1,10 +1,28 @@
 ---
 import { Image } from 'astro:assets';
-const { imagen, alt, content,  isPictureRight} = Astro.props;
+const { imagen, alt, content, isPictureRight } = Astro.props;
 ---
 
-<div class="contenido flex flex-col-reverse justify-center md:flex-row">
-  <p class="m-auto text-center font-sans md:w-3/5 md:p-4 mr-0 md:mr-10">
+<div
+  class:list={[
+    'contenido',
+    'flex',
+    'flex-col-reverse',
+    'justify-between',
+    isPictureRight ? 'md:flex-row' : 'md:flex-row-reverse',
+    'pb-10',
+  ]}
+>
+  <p 
+  
+  class:list={[
+    'm-auto',
+    'mr-0',
+    'text-center',
+    'font-sans',
+    isPictureRight ? 'md:mr-10' : 'md:ml-10',
+  ]}
+  >
     {content}
   </p>
   <Image
