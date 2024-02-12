@@ -1,33 +1,35 @@
 ---
-import { Image } from 'astro:assets';
-const { imagen, alt, content, isPictureRight } = Astro.props;
+import AboutUsCard from '../components/AboutUsCard.astro';
+
+import image1 from '../assets/img/imagen1.png';
+import image2 from '../assets/img/imagen2.png';
+import image3 from '../assets/img/imagen3.png';
 ---
 
-<div
-  class:list={[
-    'contenido',
-    'flex',
-    'flex-col-reverse',
-    'justify-between',
-    isPictureRight ? 'md:flex-row' : 'md:flex-row-reverse',
-    'pb-10',
-  ]}
->
-  <p 
-  
-  class:list={[
-    'm-auto',
-    'mr-0',
-    'text-center',
-    'font-sans',
-    isPictureRight ? 'md:mr-10' : 'md:ml-10',
-  ]}
-  >
-    {content}
+<section class="container mx-auto px-4 py-8 md:px-8 md:py-12 lg:px-60">
+  <h2 class="text-center font-poppins text-[28px] font-semibold md:text-[32px]">
+    Acerca de Nosotros
+  </h2>
+  <p class="text-pretty pb-5 text-center font-poppins md:pb-10">
+    La Sociedad Científica de Estudiantes de Sistemas e Informática (S.C.E.S.I.)
+    fue fundada un 20 de octubre del 2003. Con los objetivos de:
   </p>
-  <Image
-    class="h-48 w-full rounded-lg object-cover md:h-auto md:w-2/5"
-    src={imagen}
-    alt={alt}
+  <AboutUsCard
+    image={image1}
+    alt="Eventos de carácter científico a nivel local"
+    content="Organizar y coordinar la asistencia de estudiantes de nuestra Facultad y Sociedad a eventos de carácter científico a nivel local, nacional e internacional."
+    isPictureLast={true}
   />
-</div>
+  <AboutUsCard
+    image={image2}
+    alt="Organización de SCESI de eventos científicos"
+    content="Organizar y ser partícipes de los eventos científicos locales, nacionales o internacionales en el ámbito estudiantil que tengan por  interés las Carreras de Sistemas e Informática UMSS."
+    isPictureLast={false}
+  />
+  <AboutUsCard
+    image={image3}
+    alt="Participación en gestiones SCESI"
+    content="Gestionar el patrocinio para proyectos o eventos de investigación cuyos autores principales sean integrantes de la SCESI."
+    isPictureLast={true}
+  />
+</section>
