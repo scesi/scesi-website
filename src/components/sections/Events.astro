@@ -2,7 +2,7 @@
 import talleres from '../../assets/images/Talleres.jpg';
 import flisol from '../../assets/images/Flisol.jpg';
 import campaña from '../../assets/images/Campaña navideña.jpg';
-import CardEvents from '../EventCard.astro';
+import EventCard from '../EventCard.astro';
 ---
 
 <div class="container mx-auto max-w-5xl">
@@ -10,11 +10,19 @@ import CardEvents from '../EventCard.astro';
     Nuestros Eventos
   </p>
   <div
-    class="scrollImages mx-5 mb-7 flex items-center justify-items-center gap-6"
+    class="scrollImages mx-5 mb-7 flex items-center justify-items-center gap-1"
   >
-    <CardEvents image={flisol} description="Evento de la FLISOL" />
-    <CardEvents image={talleres} description="Evento de la FLISOL" />
-    <CardEvents image={campaña} description="Evento de la FLISOL" />
+    <EventCard title="Flisol" src={flisol} alt="Evento de la FLISOL" />
+    <EventCard
+      title="Talleres SCESI"
+      src={talleres}
+      alt="Talleres realizados por la SCESI"
+    />
+    <EventCard
+      title="Campaña navideña"
+      src={campaña}
+      alt="Campaña navideña patitas"
+    />
 
     <style>
       .scrollImages {

@@ -2,23 +2,29 @@
 import { Image } from 'astro:assets';
 
 interface Props {
-  image: ImageMetadata;
-  description: string;
+  title: string;
+  src: ImageMetadata;
+  alt: string;
 }
 
-const { image, description } = Astro.props;
+const { title, src, alt } = Astro.props;
 ---
 
 <div class="box mx-auto">
   <Image
-    src={image}
-    alt={description}
-    class="aspect-square min-w-[300px] rounded-xl md:w-full"
+    title={title}
+    src={src}
+    alt={alt}
+    class="imageCard aspect-square min-w-[300px] rounded-xl md:w-full"
   />
-  <p class="textBox">Hola</p>
+  <p class="textBox font-poppins">{title}</p>
 </div>
 
 <style>
+  .imageCard {
+    box-shadow: 0px 2px 5px;
+    border: 1px solid white;
+  }
   .box {
     display: inline-block;
     position: relative;
@@ -32,12 +38,13 @@ const { image, description } = Astro.props;
     text-align: center;
     padding: 5px;
     padding-inline: 10px;
-    border-radius: 10%;
+    border-radius: 10px;
+    min-width: max-content;
     background-color: white;
     position: absolute;
     top: 85%;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: 0px 3px 10px;
+    box-shadow: 0px 3px 5px;
   }
 </style>
