@@ -1,45 +1,17 @@
 ---
-import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 
 import Events from '../components/sections/Events.astro';
 import AboutUs from '../components/AboutUs.astro';
+import Capuchino from '../components/Capuchino.astro';
 import JoinAs from '../components/JoinAs.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Welcome to Astro.">
   <AboutUs />
+  <Capuchino />
   <Events />
   <JoinAs />
   <Footer />
-  <Layout title="Welcome to Astro...">
-    <div class="grid w-full grid-cols-2">
-      <div class="grid h-full content-center bg-slate-950 p-12">
-        <p class="mb-4 text-center font-['Poppins'] text-4xl text-white">
-          Construye tu horario con capucchino
-        </p>
-        <p class="p-6 text-center font-['Poppins'] text-xl text-white">
-          Aun no armaste tu horario? no te preocupes relájate, ponte cómodo y
-          sírvete un cappuchino mientras armas tus horarios
-        </p>
-        <button
-          class="mx-auto mt-6 h-16 w-52 rounded-full bg-red-600 text-white hover:bg-sky-800"
-          >Arma tu horario ahora</button
-        >
-      </div>
-      <div class="h-full border border-red-600">
-        <Image
-          src={myImage}
-          class="aspect-square h-full w-full object-cover object-left-top"
-          alt="Imagen-de-interfaz-Capucchino-Scesi"
-        />
-      </div>
-    </div>
-
-    <!-- <button
-    class="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3"
-    >...</button
-  > -->
-  </Layout>
 </Layout>
