@@ -1,0 +1,9 @@
+---
+import { Image } from 'astro:assets';
+
+const { size, src, alt } = Astro.props;
+---
+
+<div class=`w-full ${size === 'wide' ? 'sm:w-1/2' : 'sm:w-1/4'}`>
+  <Image src={src} class="w-full rounded-lg object-cover md:h-72" alt={alt} />
+</div>

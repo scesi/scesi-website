@@ -1,13 +1,21 @@
 ---
-import JoinAs from '../components/JoinAs.astro';
 import Layout from '../layouts/Layout.astro';
+
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/sections/Hero.astro';
+import Events from '../components/sections/Events.astro';
+import AboutUs from '../components/AboutUs.astro';
+import JoinAs from '../components/JoinAs.astro';
+import Gallery from '../components/Gallery.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Welcome to Astro.">
+  <Navbar />
+  <Hero />
+  <AboutUs />
+  <Events />
   <JoinAs />
-
-  <button
-    class="bg-sky-700 px-4 py-2 font-poppins text-white hover:bg-sky-800 sm:px-8 sm:py-3"
-    >My custom Button</button
-  >
+  <Gallery />
+  <Footer />
 </Layout>

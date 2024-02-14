@@ -1,0 +1,43 @@
+---
+import FooterSocialLink from './FooterSocialLink.astro';
+
+import ScesiBgDark from './icons/ScesiBgDark.astro';
+import FacebookIcon from './icons/FacebookIcon.astro';
+import XIcon from './icons/XIcon.astro';
+import InstagramIcon from './icons/InstagramIcon.astro';
+import YoutubeIcon from './icons/YoutubeIcon.astro';
+---
+
+<footer class="w-full bg-[#202020] px-8 pb-2 pt-6">
+  <div
+    class="container mx-auto flex flex-col gap-6 md:flex-row-reverse md:justify-between"
+  >
+    <div>
+      <h4 class="font-poppins font-bold text-white">Síguenos en:</h4>
+      <div class="mt-4 flex gap-8">
+        <FooterSocialLink href="https://www.facebook.com/scesi">
+          <FacebookIcon />
+        </FooterSocialLink>
+
+        <FooterSocialLink href="https://x.com/ScesiU">
+          <XIcon />
+        </FooterSocialLink>
+
+        <FooterSocialLink href="https://www.instagram.com/scesiumss">
+          <InstagramIcon />
+        </FooterSocialLink>
+
+        <FooterSocialLink href="https://www.youtube.com/@scesiUmss">
+          <YoutubeIcon />
+        </FooterSocialLink>
+      </div>
+    </div>
+
+    <ScesiBgDark />
+  </div>
+  <p class="mt-2 text-center text-white">
+    Hecho con ❤️ por el team <a href="#" class="font-medium underline"
+      >SCESI webcito</a
+    >
+  </p>
+</footer>
