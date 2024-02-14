@@ -1,11 +1,9 @@
 ---
-interface Props {
-  href: string;
-}
+type Props = astroHTML.JSX.AnchorHTMLAttributes & {};
 
-const { href } = Astro.props;
+const { href, 'aria-label': ariaLabel } = Astro.props;
 ---
 
-<a href={href} target="_blank" rel="noopener noreferrer">
+<a href={href} target="_blank" rel="noopener noreferrer" aria-label={ariaLabel}>
   <slot />
 </a>
