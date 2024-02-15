@@ -11,15 +11,18 @@ interface props {
 const { title, image, redirectTo, textButton } = Astro.props as props;
 ---
 
-<div class="flex max-w-[300px] flex-col items-center gap-3 py-0 text-center">
+<article
+  class="flex max-w-[400px] flex-col items-center gap-3 px-5 py-0 text-center"
+>
   <Image src={image} class="aspect-square w-[100%] object-cover" alt={title} />
 
   <p class="font-Poppins text-2xl font-semibold">{title}</p>
   <slot class="font-Poppins text-base font-normal" name="content" />
+
   <a
-    class="font-Poppins m-auto mt-3 block rounded-md bg-red-600 px-[18px] py-3 text-lg font-bold text-white"
+    class="font-Poppins bg-scesi-red mx-auto block rounded-md px-[18px] py-3 text-lg font-bold text-white"
     href={redirectTo}
   >
     {textButton}
   </a>
-</div>
+</article>

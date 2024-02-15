@@ -1,14 +1,15 @@
 ---
-import ContactCard from './ContactCard.astro';
+import ContactCard from '../ContactCard.astro';
 
-import news_channel_image from '../assets/images/news_channel_image.png';
-import visit_blog_image from '../assets/images/visit_blog_image.png';
+import news_channel_image from '../../assets/images/news_channel_image.png';
+import visit_blog_image from '../../assets/images/visit_blog_image.png';
 ---
 
-<section class="container m-auto px-[41px] py-16">
+<section class="container mx-auto py-12 md:py-16">
   <h2 class="font-Poppins mb-5 text-center text-2xl font-bold sm:text-[32px]">
     Conéctate con Nosotros
   </h2>
+
   <div
     class="flex flex-col items-center gap-6 lg:flex-row lg:items-start lg:justify-evenly lg:px-24"
   >
@@ -27,7 +28,7 @@ import visit_blog_image from '../assets/images/visit_blog_image.png';
     <div class="hidden h-[60vh] w-[0.2px] bg-gray-600 xl:flex"></div>
 
     <ContactCard
-      title="Visita y aprende con el  blog de la SCESI"
+      title="Aprende con el blog de la SCESI"
       image={visit_blog_image}
       textButton="Ir al blog"
       redirectTo="/"
