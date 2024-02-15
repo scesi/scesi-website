@@ -10,41 +10,26 @@ interface Props {
 const { title, src, alt } = Astro.props;
 ---
 
-<div class="box mx-auto">
+<article class="flex snap-center flex-col items-center">
   <Image
     title={title}
     src={src}
     alt={alt}
-    class="imageCard aspect-square min-w-[300px] rounded-xl md:w-full"
+    class="img-shadow aspect-square min-w-[300px] rounded-xl md:w-full"
   />
-  <p class="textBox font-poppins">{title}</p>
-</div>
+  <h4
+    class="title-shadow w-fit -translate-y-1/2 rounded-[4px] bg-white px-2 py-1 font-poppins"
+  >
+    {title}
+  </h4>
+</article>
 
-<style>
-  .imageCard {
-    box-shadow: 0px 2px 5px;
-    border: 1px solid white;
+<style scoped>
+  .img-shadow {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
   }
-  .box {
-    display: inline-block;
-    position: relative;
-    padding-bottom: 30px;
-    margin-inline: 5px;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-  }
-  .textBox {
-    display: inline;
-    text-align: center;
-    padding: 5px;
-    padding-inline: 10px;
-    border-radius: 10px;
-    min-width: max-content;
-    background-color: white;
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0px 3px 5px;
+
+  .title-shadow {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
   }
 </style>
