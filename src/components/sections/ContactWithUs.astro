@@ -1,0 +1,42 @@
+---
+import ContactCard from '../ContactCard.astro';
+
+import news_channel_image from '../../assets/images/news_channel_image.png';
+import visit_blog_image from '../../assets/images/visit_blog_image.png';
+---
+
+<section class="container mx-auto py-12 md:py-16">
+  <h2 class="font-Poppins mb-5 text-center text-2xl font-bold sm:text-[32px]">
+    Conéctate con Nosotros
+  </h2>
+
+  <div
+    class="flex flex-col items-center gap-6 lg:flex-row lg:items-start lg:justify-evenly lg:px-24"
+  >
+    <ContactCard
+      title="Únete a nuestro canal de noticias!"
+      image={news_channel_image}
+      textButton="Entrar al canal de whatsapp"
+      redirectTo="/"
+    >
+      <p slot="content">
+        Contamos con un canal de Whatsapp para que te enteres de todas las
+        noticias relacionadas a la facultad y carrera.
+      </p>
+    </ContactCard>
+
+    <div class="hidden h-[60vh] w-[0.2px] bg-gray-600 xl:flex"></div>
+
+    <ContactCard
+      title="Aprende con el blog de la SCESI"
+      image={visit_blog_image}
+      textButton="Ir al blog"
+      redirectTo="/"
+    >
+      <p slot="content">
+        Si deseas aprender de la mano de nuestros miembros, contamos con un blog
+        donde podrás encontrar artículos acerca de programación y seguridad
+      </p>
+    </ContactCard>
+  </div>
+</section>
