@@ -12,15 +12,15 @@ interface Props {
 const { image, alt, content, isPictureLast } = Astro.props;
 ---
 
-<div
+<article
   class:list={[
-    'flex flex-col-reverse justify-between pb-10',
+    'flex flex-col-reverse justify-between',
     isPictureLast ? 'md:flex-row' : 'md:flex-row-reverse',
   ]}
 >
   <p
     class:list={[
-      'm-auto mr-0 text-center font-poppins ',
+      'm-auto mr-0 text-center font-poppins',
       isPictureLast ? 'md:mr-10' : 'md:ml-10',
     ]}
   >
@@ -32,4 +32,4 @@ const { image, alt, content, isPictureLast } = Astro.props;
     src={image}
     alt={alt}
   />
-</div>
+</article>
