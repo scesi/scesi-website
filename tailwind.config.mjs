@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         'scesi-red': '#D83746',
+        'scesi-dark-blue': '#020110',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
