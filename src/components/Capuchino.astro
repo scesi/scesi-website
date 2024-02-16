@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import myImage from '../assets/img_capuchino.png';
+import myModel from '../assets/imgs_capuchino/capuchino.png';
+import CapuchinoIcon from './icons/charm_coffee.astro';
 
 import Layout from '../layouts/Layout.astro';
 ---
@@ -8,6 +9,7 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Welcome to Astro...">
   <div class="grid w-full grid-cols-1 md:grid-cols-2">
     <div class="grid h-full content-center bg-slate-950 p-12">
+      <CapuchinoIcon class="justify-self-center" />
       <p
         class="mb-4 text-center font-poppins text-4xl font-semibold text-white"
       >
@@ -25,7 +27,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
     <div class="h-full">
       <Image
-        src={myImage}
+        src={myModel}
         class="aspect-square h-full w-full object-cover object-left-top"
         alt="Imagen-de-interfaz-Capucchino-Scesi"
       />
