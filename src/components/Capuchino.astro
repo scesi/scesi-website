@@ -2,14 +2,14 @@
 import { Image } from 'astro:assets';
 import myModel from '../assets/imgs_capuchino/capuchino.png';
 import CapuchinoIcon from './icons/charm_coffee.astro';
-
-import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Welcome to Astro...">
+<section>
   <div class="grid w-full grid-cols-1 md:grid-cols-2">
     <div class="grid h-full content-center bg-slate-950 p-12">
-      <CapuchinoIcon class="justify-self-center" />
+      <div class="flex justify-center">
+        <CapuchinoIcon />
+      </div>
       <p
         class="mb-4 text-center font-poppins text-4xl font-semibold text-white"
       >
@@ -33,4 +33,4 @@ import Layout from '../layouts/Layout.astro';
       />
     </div>
   </div>
-</Layout>
+</section>
