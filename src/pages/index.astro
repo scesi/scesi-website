@@ -1,17 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/sections/Hero.astro';
 import Events from '../components/sections/Events.astro';
 import AboutUs from '../components/AboutUs.astro';
 import Capuchino from '../components/Capuchino.astro';
 import JoinAs from '../components/JoinAs.astro';
+import ContactWithUs from '../components/sections/ContactWithUs.astro';
+import Gallery from '../components/Gallery.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Welcome to Astro.">
+  <Navbar />
+  <Hero />
   <AboutUs />
   <Capuchino />
   <Events />
   <JoinAs />
+  <ContactWithUs />
+  <Gallery />
   <Footer />
 </Layout>
