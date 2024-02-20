@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets';
+
+import myModel from '../../assets/imgs_capuchino/capuchino.png';
+import CapuchinoIcon from '../icons/charm_coffee.astro';
+---
+
+<section class="grid w-full grid-cols-1 md:grid-cols-2">
+  <div class="bg-scesi-dark-blue px-5 py-12">
+    <div class="mx-auto grid h-full max-w-[400px] content-center gap-3">
+      <CapuchinoIcon class="mx-auto md:h-12 md:w-12" />
+
+      <h3 class="text-center font-poppins text-2xl font-semibold text-white">
+        Construye tu horario con capucchino
+      </h3>
+      <p class="text-center font-poppins text-white">
+        Aun no armaste tu horario? no te preocupes relájate, ponte cómodo y
+        sírvete un cappuchino mientras armas tus horarios
+      </p>
+
+      <a
+        class="mx-auto rounded-full bg-scesi-red px-4 py-2 font-poppins font-bold text-white"
+        href="https://capuchino-scesi.web.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Arma tu horario ahora
+      </a>
+    </div>
+  </div>
+
+  <Image
+    src={myModel}
+    class="h-full w-full object-cover object-left-top"
+    alt="Imagen-de-interfaz-Capucchino-Scesi"
+  />
+</section>

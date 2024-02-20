@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+
+interface props {
+  title: string;
+  image: ImageMetadata;
+  redirectTo: string;
+  textButton: string;
+}
+
+const { title, image, redirectTo, textButton } = Astro.props as props;
+---
+
+<article
+  class="flex max-w-[400px] flex-col items-center gap-3 px-5 py-0 text-center"
+>
+  <Image src={image} class="aspect-square w-[100%] object-cover" alt={title} />
+
+  <p class="font-Poppins text-2xl font-semibold">{title}</p>
+  <slot class="font-Poppins text-base font-normal" name="content" />
+
+  <a
+    class="font-Poppins mx-auto block rounded-md bg-scesi-red px-[18px] py-3 text-lg font-bold text-white"
+    href={redirectTo}
+  >
+    {textButton}
+  </a>
+</article>

@@ -5,12 +5,13 @@ import campaña from '../../assets/images/Campaña navideña.jpg';
 import EventCard from '../EventCard.astro';
 ---
 
-<div class="container mx-auto max-w-5xl">
-  <p class="mb-8 mt-8 text-center font-sans text-4xl font-bold">
+<section class="container mx-auto max-w-5xl py-16">
+  <h2 class="mb-8 text-center font-poppins text-[32px] font-semibold">
     Nuestros Eventos
-  </p>
+  </h2>
+
   <div
-    class="scrollImages mx-5 mb-7 flex items-center justify-items-center gap-1"
+    class="mx-5 mb-7 flex snap-x snap-mandatory items-center justify-items-center gap-1 overflow-x-auto"
   >
     <EventCard title="Flisol" src={flisol} alt="Evento de la FLISOL" />
     <EventCard
@@ -23,13 +24,5 @@ import EventCard from '../EventCard.astro';
       src={campaña}
       alt="Campaña navideña patitas"
     />
-
-    <style>
-      .scrollImages {
-        scroll-snap-type: x mandatory;
-        overflow-x: scroll;
-        scrollbar-width: none;
-      }
-    </style>
   </div>
-</div>
+</section>
