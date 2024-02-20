@@ -5,14 +5,16 @@ import ScesiBoy from '../icons/ScesiBoy.astro';
 ---
 
 <div class="static flex h-screen flex-col bg-white bg-cover">
-  <div class="z-10 mx-auto mt-[50%] w-fit md:mt-[15%]">
-    <Logo fill="#333333" width="full" />
+  <div class="flex flex-col items-center justify-center h-screen title">
+    <div class="z-10 md:w-fit mx-auto">
+      <Logo fill="#333333" width="full" />
+    </div>
+    <p
+      class="z-10 mb-[50px] mt-16 text-center font-poppins text-2xl leading-relaxed md:mt-8 md:text-5xl w-fit"
+    >
+      Sociedad Científica de Estudiantes <br /> de Sistemas e Informática
+    </p>
   </div>
-  <p
-    class="z-10 mb-[50px] mt-16 text-center font-poppins text-2xl leading-relaxed md:mt-8 md:text-5xl"
-  >
-    Sociedad Científica de Estudiantes <br /> de Sistemas e Informática
-  </p>
   <div class="absolute z-10 flex h-full w-full items-end justify-between">
     <ScesiGirl class="relative h-fit" />
     <ScesiBoy class="relative h-fit" />
@@ -104,4 +106,20 @@ import ScesiBoy from '../icons/ScesiBoy.astro';
       transform: translateY(10vh) scale(1) rotate(360deg);
     }
   }
+  @media screen and (max-height: 500px) {
+  .title {
+    width: 100%;
+    gap: 0;
+    z-index: 30;
+  }
+  .title div {
+    margin-top: 80px;
+    width: 30%;
+    
+  }
+  .title p {
+    margin-top: 0;
+    font-size: larger;
+  }
+}
 </style>
