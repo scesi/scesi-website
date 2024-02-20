@@ -20,7 +20,7 @@ const { title, image, redirectTo, textButton } = Astro.props as props;
   <slot class="font-Poppins text-base font-normal" name="content" />
 
   <a
-    class="font-Poppins bg-scesi-red mx-auto block rounded-md px-[18px] py-3 text-lg font-bold text-white"
+    class="font-Poppins mx-auto block rounded-md bg-scesi-red px-[18px] py-3 text-lg font-bold text-white"
     href={redirectTo}
   >
     {textButton}
