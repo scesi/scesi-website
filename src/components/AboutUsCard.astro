@@ -28,7 +28,8 @@ const { image, alt, content, isPictureLast } = Astro.props;
   </p>
 
   <Image
-    class="mb-4 aspect-[4/3] w-full rounded-lg object-cover md:mb-0 md:aspect-auto md:h-auto md:w-[350px]"
+    class="mx-auto mb-4 h-[250px] w-full max-w-[350px] rounded-lg object-cover md:mb-0 md:min-w-[350px]"
+    width={400}
     src={image}
     alt={alt}
   />
