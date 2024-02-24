@@ -2,6 +2,7 @@
 import Logo from '../icons/Logo.astro';
 import ScesiGirl from '../icons/ScesiGirl.astro';
 import ScesiBoy from '../icons/ScesiBoy.astro';
+import ArrowUp from '../icons/Mouse.astro';
 ---
 
 <div class="static flex h-screen flex-col bg-white bg-cover">
@@ -13,9 +14,17 @@ import ScesiBoy from '../icons/ScesiBoy.astro';
   >
     Sociedad Científica de Estudiantes <br /> de Sistemas e Informática
   </p>
-  <div class="absolute z-10 flex h-full w-full items-end justify-between">
+
+  <div
+    class="students absolute z-10 flex h-full w-full items-end justify-between"
+  >
     <ScesiGirl class="relative h-fit" />
     <ScesiBoy class="relative h-fit" />
+  </div>
+  <div
+    class="mouse-container absolute bottom-2 left-1/2 z-10 hidden -translate-x-1/2 justify-center md:flex"
+  >
+    <ArrowUp class="mouse-up text-[#333333]" width="48" />
   </div>
 </div>
 <div class="container">
@@ -312,12 +321,38 @@ import ScesiBoy from '../icons/ScesiBoy.astro';
     animation: animate 15s linear infinite;
     animation-duration: calc(100s / var(--i));
   }
+
   @keyframes animate {
     0% {
       transform: translateY(100vh) scale(0.5) rotate(0deg);
     }
     100% {
       transform: translateY(10vh) scale(1) rotate(360deg);
+    }
+  }
+
+  .mouse-up {
+    animation: mouse-up 1s infinite linear;
+  }
+
+  @keyframes mouse-up {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @media screen and (height < 740px) {
+    .students {
+      display: none;
+    }
+    .mouse-container {
+      display: flex;
     }
   }
 </style>
