@@ -1,9 +1,40 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Member } from '../interfaces/Member';
+import MemberCard from '../components/MemberCard.astro';
+
+const resp = await fetch('https://randomuser.me/api/?results=10');
+const data = await resp.json();
+
+const team: Member[] = data.results.map((member: any) => {
+  return {
+    name: `${member.name.first} ${member.name.last}`,
+    role: 'Frontend Developer',
+    img: member.picture.large,
+    githubUrl: `https://github.com/${member.login.username}`,
+    twitterUrl: `https://twitter.com/${member.login.username}`,
+    linkedinUrl: `https://linkedin.com/${member.login.username}`,
+    instagramUrl: `https://instagram.com/${member.login.username}`,
+  };
+});
 ---
 
 <Layout title="Webcito Team">
-  <section class="mt- min-h-screen">
-    <h1>Hello</h1>
+  <section class="container mx-auto min-h-screen px-5 py-12 md:py-16">
+    <header>
+      <h2 class="font-poppins text-[32px] font-bold">Team Webcito</h2>
+      <p class="max-w-[650px] text-pretty">
+        Webcito Team, es un equipo de desarrolladores web parte de la SCESI, que
+        se decica a la creación de sitios web y aplicaciones web. Esta pagina
+        fue creada por el equipo de Webcito usando Astro, TailwindCSS, HTML y
+        CSS
+      </p>
+    </header>
+
+    <div
+      class="mt-8 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
+    >
+      {team.map((member: Member) => <MemberCard member={member} />)}
+    </div>
   </section>
 </Layout>
