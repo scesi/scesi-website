@@ -22,6 +22,8 @@ const { title, image, redirectTo, textButton } = Astro.props as props;
   <a
     class="font-Poppins mx-auto block rounded-md bg-scesi-red px-[18px] py-3 text-lg font-bold text-white"
     href={redirectTo}
+    target="_blank"
+    rel="noopener noreferrer"
   >
     {textButton}
   </a>
