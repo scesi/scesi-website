@@ -1,305 +1,322 @@
 ---
-import Logo from '../icons/Logo.astro';
+import Logo from '../icons/ScesiBgDark.astro';
 import ScesiGirl from '../icons/ScesiGirl.astro';
 import ScesiBoy from '../icons/ScesiBoy.astro';
+import ArrowUp from '../icons/Mouse.astro';
 ---
 
-<div class="static flex h-screen flex-col bg-white bg-cover">
-  <div class="z-10 mx-auto mt-[50%] w-fit md:mt-[15%]">
-    <Logo fill="#333333" width="full" />
-  </div>
-  <p
-    class="z-10 mb-[50px] mt-16 text-center font-poppins text-2xl leading-relaxed md:mt-8 md:text-5xl"
+<section class="h-full-screen relative z-10 flex flex-col bg-white">
+  <header
+    class="absolute left-1/2 top-1/2 z-20 flex min-w-[300px] max-w-[675px] -translate-x-1/2 -translate-y-2/3 flex-col justify-center"
   >
-    Sociedad Científica de Estudiantes <br /> de Sistemas e Informática
-  </p>
-  <div class="absolute z-10 flex h-full w-full items-end justify-between">
+    <div class="md:px-20 2xl:px-32">
+      <Logo
+        class="mx-auto w-full max-w-[300px] md:max-w-full"
+        textColor="#333333"
+      />
+    </div>
+
+    <p
+      class="text-center font-poppins text-2xl font-[600] leading-relaxed md:mt-8 md:text-4xl"
+    >
+      Sociedad Científica de Estudiantes de Sistemas e Informática
+    </p>
+  </header>
+
+  <div
+    class="students absolute z-[15] flex h-full w-full items-end justify-between"
+  >
     <ScesiGirl class="relative h-fit" />
     <ScesiBoy class="relative h-fit" />
   </div>
-</div>
-<div class="container">
-  <div class="bubbles select-none">
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:11;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:12;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:24;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:10;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:14;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:23;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:18;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_circle_1_1378.svg"
-      style="--i:16;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:19;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_circle_2_1378.svg"
-      style="--i:20;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_circle_1_1378.svg"
-      style="--i:22;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:25;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_circle_2_1378.svg"
-      style="--i:18;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:21;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:15;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:26;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:17;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:13;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_circle_1_1378.svg"
-      style="--i:28;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:11;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_circle_2_1378.svg"
-      style="--i:13;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:8;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:27;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_circle_1_1378.svg"
-      style="--i:12;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:7;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_circle_2_1378.svg"
-      style="--i:22;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:9;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:11;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:12;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:24;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:10;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:14;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:23;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:18;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_circle_1_1378.svg"
-      style="--i:16;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:19;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_circle_2_1378.svg"
-      style="--i:20;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_circle_1_1378.svg"
-      style="--i:22;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:25;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_circle_2_1378.svg"
-      style="--i:18;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:21;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:15;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:26;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:17;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:13;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_circle_1_1378.svg"
-      style="--i:28;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:11;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_circle_2_1378.svg"
-      style="--i:13;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:8;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:27;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_circle_1_1378.svg"
-      style="--i:12;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:7;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_circle_2_1378.svg"
-      style="--i:22;"
-      alt="Background-icon"
-    />
-    <img
-      src="/icons/Trazado_Triangle_1372.svg"
-      style="--i:9;"
-      alt="Background-icon"
-    />
+
+  <div
+    class="mouse-container absolute bottom-2 left-1/2 z-[15] hidden -translate-x-1/2 justify-center md:flex"
+  >
+    <ArrowUp class="mouse-up text-[#333333]" width="48" />
   </div>
-</div>
+
+  <div class="h-full-screen absolute inset-0 z-10 min-w-full overflow-hidden">
+    <div class="bubbles select-none">
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:11;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:12;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:24;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:10;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:14;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:23;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:18;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_circle_1_1378.svg"
+        style="--i:16;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:19;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_circle_2_1378.svg"
+        style="--i:20;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_circle_1_1378.svg"
+        style="--i:22;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:25;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_circle_2_1378.svg"
+        style="--i:18;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:21;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:15;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:26;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:17;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:13;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_circle_1_1378.svg"
+        style="--i:28;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:11;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_circle_2_1378.svg"
+        style="--i:13;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:8;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:27;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_circle_1_1378.svg"
+        style="--i:12;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:7;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_circle_2_1378.svg"
+        style="--i:22;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:9;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:11;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:12;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:24;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:10;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:14;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:23;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:18;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_circle_1_1378.svg"
+        style="--i:16;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:19;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_circle_2_1378.svg"
+        style="--i:20;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_circle_1_1378.svg"
+        style="--i:22;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:25;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_circle_2_1378.svg"
+        style="--i:18;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:21;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:15;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:26;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:17;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:13;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_circle_1_1378.svg"
+        style="--i:28;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:11;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_circle_2_1378.svg"
+        style="--i:13;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:8;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:27;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_circle_1_1378.svg"
+        style="--i:12;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:7;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_circle_2_1378.svg"
+        style="--i:22;"
+        alt="Background-icon"
+      />
+      <img
+        src="/icons/Trazado_Triangle_1372.svg"
+        style="--i:9;"
+        alt="Background-icon"
+      />
+    </div>
+  </div>
+</section>
+
 <style>
-  .container {
-    position: relative;
-    max-width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    margin-top: -100vh;
+  .h-full-screen {
+    min-height: calc(100vh - 74px);
   }
+
   .bubbles {
     position: relative;
     display: flex;
@@ -312,12 +329,38 @@ import ScesiBoy from '../icons/ScesiBoy.astro';
     animation: animate 15s linear infinite;
     animation-duration: calc(100s / var(--i));
   }
+
   @keyframes animate {
     0% {
       transform: translateY(100vh) scale(0.5) rotate(0deg);
     }
     100% {
-      transform: translateY(10vh) scale(1) rotate(360deg);
+      transform: translateY(-5vh) scale(1) rotate(360deg);
+    }
+  }
+
+  .mouse-up {
+    animation: mouse-up 1s infinite linear;
+  }
+
+  @keyframes mouse-up {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @media screen and (height < 600px) {
+    .students {
+      display: none;
+    }
+    .mouse-container {
+      display: flex;
     }
   }
 </style>
