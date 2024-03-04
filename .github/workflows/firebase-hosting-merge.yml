@@ -19,4 +19,4 @@ jobs:
           channelId: live
           projectId: scesi-umss
         env:
-        FIREBASE_CLI_EXPERIMENTS: webframeworks
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
