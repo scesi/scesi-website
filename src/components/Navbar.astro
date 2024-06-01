@@ -7,13 +7,63 @@ import Logo from './icons/ScesiBgDark.astro';
 >
   <Logo />
 
-  <!-- <ul>
-    <li>
+  <ul class="flex gap-3 lg:mr-2 lg:gap-8">
+    <!-- <li>
       <a
         href="#postulaciones"
         class="text-poppins rounded-[6px] bg-[#D83746] px-3 py-2 font-medium text-white"
         >Postulaciones 2024</a
       >
+    </li> -->
+    <li>
+      <a href="#contactanos" class="navegation">Blogs</a>
     </li>
-  </ul> -->
+    <li>
+      <a href="#capuchino" class="navegation">Capuchino</a>
+    </li>
+    <li>
+      <a href="#contactanos" class="navegation">Comunidad</a>
+    </li>
+  </ul>
 </div>
+<style>
+  .navegation {
+    position: relative;
+    text-decoration: none;
+    color: rgb(175, 175, 175);
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    padding: 0 7px;
+  }
+  .navegation::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -15px;
+    transition: 0.3s;
+  }
+  .navegation:hover {
+    color: white;
+  }
+  .navegation:hover::after {
+    width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    .navegation {
+      font-size: 18px;
+      padding: 0 5px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .navegation {
+      font-size: 16px;
+      padding: 0 1px;
+      letter-spacing: 0px;
+    }
+  }
+</style>
