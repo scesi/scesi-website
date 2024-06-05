@@ -1,19 +1,118 @@
 ---
 import Logo from './icons/ScesiBgDark.astro';
+import Menu from './icons/MenuIcon.astro';
+import Close from './icons/CloseIcon.astro';
 ---
 
 <div
   class="fixed top-0 z-30 flex w-screen items-center justify-between bg-[#202020] px-5 py-3 md:px-12"
 >
-  <Logo />
-
-  <!-- <ul>
-    <li>
+  <a href="#"> <Logo /></a>
+  <input class="boxcheck" type="checkbox" id="check" />
+  <label class="icons" for="check">
+    <i class="menu" id="menu-icon"><Menu /></i>
+    <i class="close" id="close-icon"><Close /></i>
+  </label>
+  <div class="navbar">
+    <ul class="gap-3 sm:flex lg:mr-2 lg:gap-8">
+      <!-- <li>
       <a
         href="#postulaciones"
         class="text-poppins rounded-[6px] bg-[#D83746] px-3 py-2 font-medium text-white"
         >Postulaciones 2024</a
       >
-    </li>
-  </ul> -->
+    </li> -->
+      <li>
+        <a href="#capuchino" class="navegation">Capuchino</a>
+      </li>
+      <li>
+        <a href="#comunidad" class="navegation">Comunidad</a>
+      </li>
+      <li>
+        <a href="#blogs" class="navegation">Blogs</a>
+      </li>
+    </ul>
+  </div>
 </div>
+<style>
+  .navegation {
+    position: relative;
+    text-decoration: none;
+    color: rgb(140, 140, 140);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 0 5px;
+  }
+  .navegation::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -15px;
+    transition: 0.3s;
+  }
+  .navegation:hover {
+    color: white;
+  }
+  .navegation:hover::after {
+    width: 100%;
+  }
+  #check {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    .navegation {
+      font-size: 16px;
+      padding: 0 5px;
+    }
+  }
+  @media (max-width: 640px) {
+    .icons {
+      display: inline-flex;
+    }
+    #check:checked ~ .icons #menu-icon {
+      display: none;
+    }
+    .icons #close-icon {
+      display: none;
+    }
+
+    #check:checked ~ .icons #close-icon {
+      display: block;
+    }
+    .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 0px;
+      background: rgba(0, 0, 0, 0.9);
+      transition: 0.5s;
+      overflow: hidden;
+    }
+    #check:checked ~ .navbar {
+      height: 170px;
+    }
+    .navbar a {
+      display: block;
+      font-size: 16px;
+      margin: 24px;
+      text-align: center;
+    }
+
+    .boxcheck {
+      position: absolute;
+      right: 7%;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .icons {
+      display: none;
+    }
+  }
+</style>

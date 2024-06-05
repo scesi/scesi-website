@@ -2,16 +2,18 @@
 import { Image } from 'astro:assets';
 
 interface props {
+  id: string;
   title: string;
   image: ImageMetadata;
   redirectTo: string;
   textButton: string;
 }
 
-const { title, image, redirectTo, textButton } = Astro.props as props;
+const { id, title, image, redirectTo, textButton } = Astro.props as props;
 ---
 
 <article
+  id={id}
   class="flex max-w-[400px] flex-col items-center gap-3 px-5 py-0 text-center"
 >
   <Image src={image} class="aspect-square w-[100%] object-cover" alt={title} />
