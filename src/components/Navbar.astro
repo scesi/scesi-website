@@ -80,6 +80,15 @@ import Close from './icons/CloseIcon.astro';
     .icons #close-icon {
       display: none;
     }
+    .navegation::after {
+      display: none;
+    }
+    .navegation {
+      transition: transform 0.3s ease-in-out;
+    }
+    .navegation:hover {
+      transform: scale(1.1);
+    }
 
     #check:checked ~ .icons #close-icon {
       display: block;
