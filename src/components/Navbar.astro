@@ -24,10 +24,17 @@ import Close from './icons/CloseIcon.astro';
       <li>
         <a href="#blogs" class="navegation">Blogs</a>
       </li>
-      <li>
+      <li class="navegation-pc">
         <a
           href="#postulaciones"
           class="text-poppins rounded-[6px] bg-[#D83746] px-3 py-2 font-medium text-white"
+          >Postulaciones 2025</a
+        >
+      </li>
+      <li class="navegation-mobile">
+        <a
+          href="#postulaciones"
+          class="navegation"
           >Postulaciones 2025</a
         >
       </li>
@@ -61,6 +68,9 @@ import Close from './icons/CloseIcon.astro';
     width: 100%;
   }
   #check {
+    display: none;
+  }
+  .navegation-mobile {
     display: none;
   }
 
@@ -104,7 +114,7 @@ import Close from './icons/CloseIcon.astro';
       overflow: hidden;
     }
     #check:checked ~ .navbar {
-      height: 170px;
+      height: 210px;
     }
     .navbar a {
       display: block;
@@ -112,10 +122,16 @@ import Close from './icons/CloseIcon.astro';
       margin: 24px;
       text-align: center;
     }
+    .navegation-pc {
+      display: none;
+    }
 
     .boxcheck {
       position: absolute;
       right: 7%;
+    }
+    .navegation-mobile {
+      display: block;
     }
   }
 
